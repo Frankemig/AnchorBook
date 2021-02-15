@@ -22,6 +22,7 @@ class ListingFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentListingBinding.inflate(inflater)
+        adapter = BookAdapter()
 
         binding.rvList.adapter = adapter
         binding.rvList.layoutManager = GridLayoutManager(context, 1)
