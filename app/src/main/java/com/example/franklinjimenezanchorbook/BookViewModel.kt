@@ -53,6 +53,7 @@ class BookViewModel : ViewModel(){
     }
     fun setSelected(book: Book) {
         selected = book
+        Log.d("ViewModel", book.toString())
     }
 
     fun getSelected() = selected

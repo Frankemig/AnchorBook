@@ -1,5 +1,6 @@
 package com.example.franklinjimenezanchorbook
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -23,7 +24,7 @@ class BookAdapter: RecyclerView.Adapter<BookAdapter.BookVH>() {
             binding.tvTitle.text = book?.title
 
             Picasso.get().load(book?.imageLink)
-                .resize(300, 200)
+                .resize(200, 300)
                 .placeholder(R.drawable.ic_idea_comodin)
                 .centerCrop()
                 .into(binding.imageView)
@@ -41,6 +42,7 @@ class BookAdapter: RecyclerView.Adapter<BookAdapter.BookVH>() {
         holder.bind(book)
         holder.itemView.setOnClickListener {
             selectedItem.value = book
+
         }
     }
 
